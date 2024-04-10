@@ -1,0 +1,22 @@
+@startuml caso_uso
+"Main Admin" as Admin
+
+
+package System {
+    usecase "Admin the application"
+    usecase "Admin roles"
+    usecase "Use the application"
+    usecase "Case 2"
+}
+usecase "Login"
+
+User --|> "Login"
+
+"General User"  --> "Use the application"
+Admin --> "Admin the application"
+Admin --> "Admin roles"
+"Login" --|> Admin
+"Login" --|> "General User"
+
+"Use the application" ..> "Case 2"
+@enduml

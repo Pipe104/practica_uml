@@ -1,0 +1,16 @@
+@startuml caso_uso2
+usecase "checkout"
+usecase "payment"
+usecase "help"
+
+customer -- "checkout"
+clerk -- "checkout"
+"checkout" ..> "payment" : include
+"help" ..> "checkout" : extends
+
+
+
+
+
+
+@endluml
