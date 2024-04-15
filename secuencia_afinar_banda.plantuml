@@ -1,0 +1,7 @@
+@startuml Diagrama de secuencia banda
+
+Principal -> Banda : afinar_banda()
+loop n veces
+    Banda -> Musico : afinar_instrumento()
+    Musico -> Instrumento : afinar()
+end

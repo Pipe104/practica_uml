@@ -1,0 +1,36 @@
+@startuml banda
+
+package logica {
+interface Instrumento
+class Musico
+class Banda
+Instrumento <|.. Guitarra
+Instrumento <|.. Cuatro
+Instrumento <|.. Piano
+Instrumento <|.. Flauta
+}
+
+
+class Principal
+Principal -- Banda
+Principal : main()
+
+Instrumento : afinar()
+Instrumento : tocar()
+
+Instrumento : afinar()
+Instrumento : tocar()
+
+
+
+Musico *-- Instrumento
+
+Banda o-- Musico
+
+Musico : Instrumento instrumento
+
+Banda : Musico [] musicos
+
+Banda : generar_instrumentos()
+Banda : afinar_banda()
+Banda : tocar_banda()
